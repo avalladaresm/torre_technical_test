@@ -1,6 +1,8 @@
+import { useRouter } from "next/dist/client/router";
 import Head from "next/head";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="bg-gray-900 h-screen">
       <Head>
@@ -19,7 +21,12 @@ export default function Home() {
               </p>
             </div>
           </button>
-          <button className="group h-[5rem] w-[15rem] hover:bg-gray-500 bg-gray-700 rounded-md">
+          <button
+            onClick={() => {
+              router.push("opportunities");
+            }}
+            className="group h-[5rem] w-[15rem] hover:bg-gray-500 bg-gray-700 rounded-md"
+          >
             <div className="flex h-full justify-center items-center">
               <p className="text-2xl font-semibold text-gray-300 group-hover:text-gray-50">
                 Opportunities

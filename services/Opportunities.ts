@@ -1,19 +1,22 @@
 import useSWR from "swr";
 import axios from "axios";
 
-const GetOpportunities = async (q: string) => {
+const GetOpportunities = async (q?: string) => {
   try {
-    const opportunities = await axios.get(
-      `https://search.torre.co/opportunities/_search/?q${q}`
+    const opportunities = await axios.post(
+      `https://search.torre.co/opportunities/_search/?q=${q}&size=20`,
+      {},
+      { headers: { "Content-Type": "application/json" } }
     );
+
     return opportunities.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const useOpportunities = (q: string) => {
-  const { data, error } = useSWR(q, GetOpportunities);
+export const useOpportunities = (q?: string) => {
+  const { data, error } = useSWR(q ?? "react", GetOpportunities);
 
   return {
     opportunities: data,
