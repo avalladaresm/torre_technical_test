@@ -19,3 +19,10 @@
 - Added Opportunities page that shows fetched opportunities in a doubled column list
 - Added custom Input component
 - Fixed search opportunities service method
+
+### 11:00am - 12:00am:
+
+- Added custom Modal component to show a specific opportunity's data
+- Added custom Badge component to show required skills for an opportunity
+- Added headlessui library to create custom Modal component
+- Added organization name and image to the opportunity data displayed in the Modal
