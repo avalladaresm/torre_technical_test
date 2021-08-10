@@ -13,12 +13,9 @@ import { LoadingSpinner } from "../../components/LoadingSpinner";
 
 const Opportunities = () => {
   const [_searchText, _setSearchText] = useState("");
-  const [_selectedOpportunity, _setSelectedOpportunity] = useState<any>();
   const { bio, isLoading, isError } = useBioInformation(_searchText);
   const router = useRouter();
 
-  console.log(_searchText);
-  console.log(bio);
   return (
     <div className="bg-gray-900 min-h-screen h-full">
       <Head>
@@ -48,7 +45,7 @@ const Opportunities = () => {
         />
       </div>
       <div>
-        {isLoading ? (
+        {isLoading && _searchText.length > 0 ? (
           <div className="mt-10">
             <LoadingSpinner />
           </div>
