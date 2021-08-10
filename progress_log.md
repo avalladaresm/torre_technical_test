@@ -20,6 +20,8 @@
 - Added custom Input component
 - Fixed search opportunities service method
 
+## Monday, August 9th, 2021
+
 ### 11:00am - 12:00m:
 
 - Added custom Modal component to show a specific opportunity's data
