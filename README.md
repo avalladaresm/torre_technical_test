@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This is the repository of my solution to the technical test towards an Software Developer Internship at Torre.co.
+This is the repository of my solution to the technical test towards a Software Developer Internship at Torre.co.
 
 ## Getting Started
 
