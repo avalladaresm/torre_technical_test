@@ -1,8 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This is the repository of my solution to the technical test towards an Software Developer Internship at Torre.co.
+
 ## Getting Started
 
-First, run the development server:
+First, clone this repo to your computer on the location of your preference.
+
+Second, run the development server:
 
 ```bash
 npm run dev
@@ -10,25 +14,19 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The app is hosted at https://torretechnicaltest.vercel.app/ and is quite simple.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+The main screen consists of two buttons, a Bios button and a Opportunities button.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The Bios button takes you to the /bios page, in which a user can be looked up, for example, alejandrovalladares. Once the Search button is pressed, the user's basic information will be displayed, such as the user's name, location, bio summary, job experience and interests. Note that if a user does not exist, an error result is displayed.
 
-## Learn More
+The Opportunities button takes you to the /opportunities page, in which a latest 20 opportunities are fetched. The opportunities are shown as cards in a 2-column layout. Only the name of the opportunity and remote availability is displayed. If a card is clicked, a modal with more details is displayed, details such as opportunity summary, remote availability, company name and logo, required skills, required skills and max date to apply.
 
-To learn more about Next.js, take a look at the following resources:
+Both pages have a back button the takes you back to the main page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key points
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Note that some code has been extracted into separate components to follow an atomic design, and to avoid repeating myself.
+- A data fetching library, SWR, was used to fetch the data from the endpoints provided. This library is useful to cache data and avoid repeating requests, for example, if an opportunity is selected and the modal pops up, it will make a request to get the opportunity summary and compensation. If the modal is closed and the an opportunity that was previously selected is selected again, the data will be shown immediately as it was cached already.
