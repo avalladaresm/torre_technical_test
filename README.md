@@ -30,3 +30,4 @@ Both pages have a back button the takes you back to the main page.
 
 - Note that some code has been extracted into separate components to follow an atomic design, and to avoid repeating myself.
 - A data fetching library, SWR, was used to fetch the data from the endpoints provided. This library is useful to cache data and avoid repeating requests, for example, if an opportunity is selected and the modal pops up, it will make a request to get the opportunity summary and compensation. If the modal is closed and the an opportunity that was previously selected is selected again, the data will be shown immediately as it was cached already.
+- The design and styling was been built from scratch by me, using TailwindCSS.
