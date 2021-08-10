@@ -20,9 +20,16 @@
 - Added custom Input component
 - Fixed search opportunities service method
 
-### 11:00am - 12:00am:
+### 11:00am - 12:00m:
 
 - Added custom Modal component to show a specific opportunity's data
 - Added custom Badge component to show required skills for an opportunity
 - Added headlessui library to create custom Modal component
 - Added organization name and image to the opportunity data displayed in the Modal
+
+### 5:00pm - 6:00pm
+
+- Added custom TextSkeleton component to display loading value
+- Added custom Result component to display an error message when error
+- Created custom OpportunityModal component to separate that logic and as an atomic design principle
+- Added a list of cards with TextSkeletons when fetching opportunities to display a loading state

@@ -16,6 +16,7 @@ export default function Modal({
         <Dialog
           as="div"
           static
+          initialFocus={cancelButtonRef}
           className="fixed inset-0 z-10 overflow-y-auto bg-gray-900/60"
           onClose={setIsOpen}
         >
@@ -75,7 +76,7 @@ export default function Modal({
   );
 }
 
-interface ModalProps {
+export interface ModalProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   modalTitle?: string;
