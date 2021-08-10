@@ -40,3 +40,10 @@
 - Added back button to Opportunities page
 - Added Bios page
 - Fixed Input component to search a bio
+
+### 9:00pm - 9:30pm
+
+- Added Loading Spinner component to show a loading state
+- Added a search input to look up users
+- Added a bio's name, bio summary, job experience and interests data of a searched user
+- Added a text size prop to the Badge component
