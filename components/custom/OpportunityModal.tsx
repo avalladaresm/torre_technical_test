@@ -66,6 +66,22 @@ export default function OpportunityModal({
               ))}
             </span>
           </p>
+          <p className="text-white">
+            Compensation:{" "}
+            {additionalOppData?.compensation.minAmount
+              ? additionalOppData?.compensation.currency +
+                additionalOppData?.compensation.minAmount +
+                " - " +
+                additionalOppData?.compensation.currency +
+                additionalOppData?.compensation.maxAmount +
+                " " +
+                additionalOppData?.compensation.periodicity
+              : "No information"}
+          </p>
+          <p className="text-white">
+            Max date to apply:{" "}
+            {new Date(additionalOppData?.deadline).toDateString()}
+          </p>
         </div>
       </div>
     </Modal>

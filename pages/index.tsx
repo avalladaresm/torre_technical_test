@@ -14,7 +14,12 @@ export default function Home() {
       </div>
       <div className="flex justify-center px-32">
         <div className="flex flex-row gap-20">
-          <button className="group h-[5rem] w-[15rem] hover:bg-gray-500 bg-gray-700 rounded-md">
+          <button
+            onClick={() => {
+              router.push("bios");
+            }}
+            className="group h-[5rem] w-[15rem] hover:bg-gray-500 bg-gray-700 rounded-md"
+          >
             <div className="flex h-full justify-center items-center">
               <p className="text-2xl font-semibold text-gray-300 group-hover:text-gray-50">
                 Bios

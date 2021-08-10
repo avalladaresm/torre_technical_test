@@ -33,3 +33,10 @@
 - Added custom Result component to display an error message when error
 - Created custom OpportunityModal component to separate that logic and as an atomic design principle
 - Added a list of cards with TextSkeletons when fetching opportunities to display a loading state
+
+### 8:00pm - 9:00pm
+
+- Added compensation data to Opportunity modal
+- Added back button to Opportunities page
+- Added Bios page
+- Fixed Input component to search a bio
